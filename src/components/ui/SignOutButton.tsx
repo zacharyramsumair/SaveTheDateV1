@@ -29,7 +29,7 @@ const SignOutButton: FC<SignOutButtonProps> = ({}) => {
   }
 
   return (
-    <Button onClick={signUserOut} isLoading={isLoading}>
+    <Button onClick={signUserOut} isLoading={isLoading} className='hidden  md:flex'>
       Sign out
     </Button>
   )

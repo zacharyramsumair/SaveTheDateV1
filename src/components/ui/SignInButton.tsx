@@ -26,7 +26,7 @@ const SignInButton: FC<SignInButtonProps> = ({}) => {
   };
 
   return (
-    <Button onClick={signInWithGoogle} isLoading={isLoading}>
+    <Button onClick={signInWithGoogle} isLoading={isLoading} className='hidden  md:flex'>
       Sign in
     </Button>
   );
