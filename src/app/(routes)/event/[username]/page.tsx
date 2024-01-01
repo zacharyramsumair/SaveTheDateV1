@@ -2,6 +2,7 @@ import NotFound from "@/app/not-found";
 import CountdownToDateAndTime from "@/components/CountdownToDateAndTime";
 import EditButton from "@/components/EditButton";
 import Icons from "@/components/Icons";
+import ShareUrlButton from "@/components/ShareUrlButton";
 import { buttonVariants } from "@/components/ui/Button";
 import LargeHeading from "@/components/ui/LargeHeading";
 import Paragraph from "@/components/ui/Paragraph";
@@ -143,6 +144,7 @@ const page = async ({ params }: any) => {
 							<CountdownToDateAndTime eventDate={creator?.eventDate} />
 						</div>
 						<LargeHeading size="sm">{formattedDate}</LargeHeading>
+						<ShareUrlButton/>
 						<Paragraph>{creator?.eventInfo1}</Paragraph>
 					</div>
 				</div>

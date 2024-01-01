@@ -6,9 +6,11 @@ import {
 	Laptop,
 	FileEdit,
 	LogOut,
+	Share2 
 } from "lucide-react";
 
-export const Icons = {
+export const 
+ Icons = {
 	ChevronLeft,
 	ChevronRight,
 	Sun,
@@ -16,6 +18,7 @@ export const Icons = {
 	Laptop,
 	FileEdit,
 	LogOut,
+	Share2 
 };
 
 export default Icons;
