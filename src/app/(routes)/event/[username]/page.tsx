@@ -19,7 +19,7 @@ type Props = {};
 export const metadata: Metadata = {
 	title: "Save The Date | Event",
 	description: "Plan your next event and let your people know!",
-  };
+};
 
 const page = async ({ params }: any) => {
 	// let data = await getSpecificEventHelper(params.username as string)
@@ -131,6 +131,10 @@ const page = async ({ params }: any) => {
 		minutes < 10 ? "0" : ""
 	}${minutes} ${hours >= 12 ? "p.m." : "a.m."}`;
 
+	// if eventDate passed
+	const eventDate = new Date(creator?.eventDate || "");
+	const currentDate = new Date();
+
 	return (
 		<>
 			<div
@@ -141,10 +145,16 @@ const page = async ({ params }: any) => {
 					<div className="flex flex-col items-center text-center gap-6">
 						<LargeHeading size="lg">{creator?.eventTitle}</LargeHeading>
 						<div>
-							<CountdownToDateAndTime eventDate={creator?.eventDate} />
+							{eventDate < currentDate ? (
+								<LargeHeading size="sm">Event Expired: Hope it was Great!</LargeHeading>
+							) : (
+								<CountdownToDateAndTime
+									eventDate={creator?.eventDate}
+								/>
+							)}
 						</div>
 						<LargeHeading size="sm">{formattedDate}</LargeHeading>
-						<ShareUrlButton/>
+						<ShareUrlButton />
 						<Paragraph>{creator?.eventInfo1}</Paragraph>
 					</div>
 				</div>
