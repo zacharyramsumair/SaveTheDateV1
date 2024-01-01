@@ -1,0 +1,20 @@
+# ------------------------
+# NextAuth.js Configuration
+# ------------------------
+
+NEXTAUTH_SECRET=anythingreally
+NEXTAUTH_URL=http://localhost:3000
+
+# ------------------------
+# OAuth Providers
+# ------------------------
+
+GOOGLE_CLIENT_ID=32849o3284093284
+GOOGLE_CLIENT_SECRET=343432432434234
+
+# ------------------------
+# Database
+# ------------------------
+
+DATABASE_URL=railway or planet scale or mongo
+
